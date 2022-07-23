@@ -1,0 +1,18 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '15.0'
+use_frameworks!
+
+plugin 'cocoapods-keys', {
+	:project => "Static IP Trainer",
+	:keys => [
+		"newrelic_token"
+	],
+	:target => "Static IP Trainer"
+}
+
+target 'Static IP Trainer' do
+project 'Static IP Trainer.xcodeproj'
+	pod 'KumpeHelpers'
+	pod 'NewRelicAgent'
+	pod 'PBTutorialManager'
+end

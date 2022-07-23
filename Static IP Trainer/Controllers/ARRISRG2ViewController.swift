@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KumpeHelpers
 
 class ARRISRG2ViewController: UIViewController {
     @IBOutlet weak var RGIPLabel: UILabel!
@@ -24,7 +25,14 @@ class ARRISRG2ViewController: UIViewController {
     var SubnetMask = ""
     var PrimaryDNS = ""
     var SecondaryDNS = ""
-    
+
+    // MARK: Buttons
+    @IBOutlet weak var buttonCancel: UIBarButtonItem!
+    @IBOutlet weak var buttonShare: UIBarButtonItem!
+
+    // MARK: Parameters
+    var message: String! = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         DHCPStartLabel.text = "\(IPO1).\(IPO2).\(IPO3).\(FUIPO4)"
@@ -34,6 +42,14 @@ class ARRISRG2ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // MARK: pressedShare
+    @IBAction func pressedShare(_ sender: Any) {
+        KumpeHelpers.Share.text(message, self, shareButton: buttonShare)
+    }
 
+    // MARK: pressedCancel
+    @IBAction func pressedCancel(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F50999E288C9F9600A5A2DC /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50999D288C9F9600A5A2DC /* TutorialManager.swift */; };
+		AA178BD8BCFA879D6DC7E84E /* Pods_Static_IP_Trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7671126E632AFB62E06D69CA /* Pods_Static_IP_Trainer.framework */; };
 		F4C8770A205F51CA007461E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C87709205F51CA007461E6 /* AppDelegate.swift */; };
 		F4C8770C205F51CA007461E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C8770B205F51CA007461E6 /* MainViewController.swift */; };
 		F4C8770F205F51CA007461E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C8770D205F51CA007461E6 /* Main.storyboard */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F50999D288C9F9600A5A2DC /* TutorialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
+		2C1963ADF931C4A3917BB4D6 /* Pods-Static IP Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Static IP Trainer.release.xcconfig"; path = "Target Support Files/Pods-Static IP Trainer/Pods-Static IP Trainer.release.xcconfig"; sourceTree = "<group>"; };
+		7671126E632AFB62E06D69CA /* Pods_Static_IP_Trainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Static_IP_Trainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C87706205F51CA007461E6 /* Static IP Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Static IP Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C87709205F51CA007461E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C8770B205F51CA007461E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		F4E73639206054600097EE39 /* SelectRGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRGViewController.swift; sourceTree = "<group>"; };
 		F4E7365C206094280097EE39 /* PaceRG1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceRG1ViewController.swift; sourceTree = "<group>"; };
 		F4E7365E2060946F0097EE39 /* PaceRG2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceRG2ViewController.swift; sourceTree = "<group>"; };
+		FF9F8A53D2E0A8E4DF9F8050 /* Pods-Static IP Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Static IP Trainer.debug.xcconfig"; path = "Target Support Files/Pods-Static IP Trainer/Pods-Static IP Trainer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA178BD8BCFA879D6DC7E84E /* Pods_Static_IP_Trainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F032C43288C8C5400DCE2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0F032C44288C8C5D00DCE2B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4C87709205F51CA007461E6 /* AppDelegate.swift */,
+				0F50999D288C9F9600A5A2DC /* TutorialManager.swift */,
+				F4C8770B205F51CA007461E6 /* MainViewController.swift */,
+				F4E73639206054600097EE39 /* SelectRGViewController.swift */,
+				F4E7365C206094280097EE39 /* PaceRG1ViewController.swift */,
+				F4CE823B2063440B001AD97B /* ARRISRG1ViewController.swift */,
+				F4E7365E2060946F0097EE39 /* PaceRG2ViewController.swift */,
+				F4CE823D20634416001AD97B /* ARRISRG2ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0F032C45288C8C6600DCE2B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4C8770D205F51CA007461E6 /* Main.storyboard */,
+				F4C87715205F51CA007461E6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		889173D1DA277275C3605140 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7671126E632AFB62E06D69CA /* Pods_Static_IP_Trainer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED7705680428E164DC3E03C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF9F8A53D2E0A8E4DF9F8050 /* Pods-Static IP Trainer.debug.xcconfig */,
+				2C1963ADF931C4A3917BB4D6 /* Pods-Static IP Trainer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F4C876FD205F51CA007461E6 = {
 			isa = PBXGroup;
 			children = (
 				F4C87708205F51CA007461E6 /* Static IP Trainer */,
 				F4C87707205F51CA007461E6 /* Products */,
+				AED7705680428E164DC3E03C /* Pods */,
+				889173D1DA277275C3605140 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,16 +123,10 @@
 		F4C87708205F51CA007461E6 /* Static IP Trainer */ = {
 			isa = PBXGroup;
 			children = (
-				F4C87709205F51CA007461E6 /* AppDelegate.swift */,
-				F4C8770B205F51CA007461E6 /* MainViewController.swift */,
-				F4E73639206054600097EE39 /* SelectRGViewController.swift */,
-				F4E7365C206094280097EE39 /* PaceRG1ViewController.swift */,
-				F4CE823B2063440B001AD97B /* ARRISRG1ViewController.swift */,
-				F4E7365E2060946F0097EE39 /* PaceRG2ViewController.swift */,
-				F4CE823D20634416001AD97B /* ARRISRG2ViewController.swift */,
-				F4C8770D205F51CA007461E6 /* Main.storyboard */,
+				0F032C45288C8C6600DCE2B0 /* Views */,
+				0F032C44288C8C5D00DCE2B0 /* Controllers */,
+				0F032C43288C8C5400DCE2B0 /* Models */,
 				F4C87713205F51CA007461E6 /* Assets.xcassets */,
-				F4C87715205F51CA007461E6 /* LaunchScreen.storyboard */,
 				F4C87718205F51CB007461E6 /* Info.plist */,
 				F4C87710205F51CA007461E6 /* Static_IP_Trainer.xcdatamodeld */,
 			);
@@ -89,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C8771B205F51CB007461E6 /* Build configuration list for PBXNativeTarget "Static IP Trainer" */;
 			buildPhases = (
+				1D0F2C408A48914F82FC6A37 /* [CP] Check Pods Manifest.lock */,
 				F4C87702205F51CA007461E6 /* Sources */,
 				F4C87703205F51CA007461E6 /* Frameworks */,
 				F4C87704205F51CA007461E6 /* Resources */,
+				F6638D66AFCEE2CEB0D08160 /* [CP] Embed Pods Frameworks */,
+				0F032C48288C9BCD00DCE2B0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -115,7 +169,7 @@
 					F4C87705205F51CA007461E6 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1140;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -150,6 +204,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F032C48288C9BCD00DCE2B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" echo `bundle exec pod keys get newrelic_token`\n";
+		};
+		1D0F2C408A48914F82FC6A37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Static IP Trainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6638D66AFCEE2CEB0D08160 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Static IP Trainer/Pods-Static IP Trainer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFCurvedArrowView/AFCurvedArrowView.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/CollectionViewCenteredFlowLayout/CollectionViewCenteredFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FetchedResultsControllerCollectionViewUpdater/FetchedResultsControllerCollectionViewUpdater.framework",
+				"${BUILT_PRODUCTS_DIR}/Haptico/Haptico.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/KumpeHelpers/KumpeHelpers.framework",
+				"${BUILT_PRODUCTS_DIR}/PBTutorialManager/PBTutorialManager.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Sync/Sync.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/NewRelicAgent/NewRelic.framework/NewRelic",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFCurvedArrowView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollectionViewCenteredFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FetchedResultsControllerCollectionViewUpdater.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haptico.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KumpeHelpers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PBTutorialManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sync.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NewRelic.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Static IP Trainer/Pods-Static IP Trainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4C87702205F51CA007461E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -159,6 +301,7 @@
 				F4CE823E20634416001AD97B /* ARRISRG2ViewController.swift in Sources */,
 				F4E7365F2060946F0097EE39 /* PaceRG2ViewController.swift in Sources */,
 				F4C87712205F51CA007461E6 /* Static_IP_Trainer.xcdatamodeld in Sources */,
+				0F50999E288C9F9600A5A2DC /* TutorialManager.swift in Sources */,
 				F4C8770A205F51CA007461E6 /* AppDelegate.swift in Sources */,
 				F4E7365D206094280097EE39 /* PaceRG1ViewController.swift in Sources */,
 				F4E7363A206054600097EE39 /* SelectRGViewController.swift in Sources */,
@@ -303,17 +446,20 @@
 		};
 		F4C8771C205F51CB007461E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF9F8A53D2E0A8E4DF9F8050 /* Pods-Static IP Trainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = "Static IP Trainer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 14.0;
+				MARKETING_VERSION = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kumpeapps.ios.Static-IP-Trainer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.kumpeapps.ios.Static-IP-Trainer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,17 +467,20 @@
 		};
 		F4C8771D205F51CB007461E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C1963ADF931C4A3917BB4D6 /* Pods-Static IP Trainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14.0;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = "Static IP Trainer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 14.0;
+				MARKETING_VERSION = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kumpeapps.ios.Static-IP-Trainer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.kumpeapps.ios.Static-IP-Trainer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

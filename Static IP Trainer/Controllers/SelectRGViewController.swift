@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import KumpeHelpers
 
 class SelectRGViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    // MARK: Pickers
     @IBOutlet weak var SelectRGPicker: UIPickerView!
+
+    // MARK: Buttons
+    @IBOutlet weak var buttonCancel: UIBarButtonItem!
+    @IBOutlet weak var buttonShare: UIBarButtonItem!
+
+    // MARK: Parameters
+    var message: String! = ""
     
     var SelectRG = ["Select RG", "3801", "5031", "NVGxxx", "5268AC", "BGWxxx"]
 
@@ -24,7 +34,7 @@ class SelectRGViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var PrimaryDNS = ""
     var SecondaryDNS = ""
     var SelectedRG = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -98,4 +108,14 @@ class SelectRGViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
 
+    // MARK: pressedShare
+    @IBAction func pressedShare(_ sender: Any) {
+        KumpeHelpers.Share.text(message, self, shareButton: buttonShare)
+    }
+
+    // MARK: pressedCancel
+    @IBAction func pressedCancel(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
