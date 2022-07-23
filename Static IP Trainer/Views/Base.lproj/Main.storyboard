@@ -239,6 +239,7 @@
                     <connections>
                         <outlet property="SelectRGPicker" destination="q7a-LM-AlP" id="eDm-rT-mdG"/>
                         <outlet property="buttonCancel" destination="KlF-3k-n5b" id="ESv-kX-6tm"/>
+                        <outlet property="buttonNext" destination="4Ay-ka-pGH" id="LlA-Ij-JPu"/>
                         <outlet property="buttonShare" destination="FDV-ua-ddr" id="BXu-fy-I3e"/>
                         <segue destination="oLu-JV-9KH" kind="show" identifier="PaceRG1" id="YuT-n5-0xw"/>
                         <segue destination="qjz-mj-Vhv" kind="show" identifier="ARRISRG1" id="ur1-zD-3bn"/>

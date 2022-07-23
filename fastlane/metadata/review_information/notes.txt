@@ -1,0 +1,1 @@
+App can be tested by entering any number from 1-254 in each field and selecting random options.

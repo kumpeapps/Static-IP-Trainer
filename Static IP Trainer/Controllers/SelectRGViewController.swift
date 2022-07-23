@@ -17,6 +17,7 @@ class SelectRGViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // MARK: Buttons
     @IBOutlet weak var buttonCancel: UIBarButtonItem!
     @IBOutlet weak var buttonShare: UIBarButtonItem!
+    @IBOutlet weak var buttonNext: UIButton!
 
     // MARK: Parameters
     var message: String! = ""
@@ -42,6 +43,12 @@ class SelectRGViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //Run SelectRG Picker
         SelectRGPicker.delegate = self
         SelectRGPicker.dataSource = self
+    }
+
+    // MARK: viewDidAppear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tutorial()
     }
     
     //MARK: Configure Select RG Picker

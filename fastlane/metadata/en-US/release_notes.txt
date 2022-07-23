@@ -1,0 +1,4 @@
+- Added App Tutorial
+- Added ability to share static ip info
+- Bug Fixes
+- Static IP Trainer is now Open Source. If you wish to contribute please look us up on GitHub or submit a support request for more info.

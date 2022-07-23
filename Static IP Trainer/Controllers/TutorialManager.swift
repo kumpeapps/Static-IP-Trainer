@@ -31,6 +31,28 @@ extension MainViewController {
     }
 }
 
+extension SelectRGViewController {
+    func tutorial() {
+        let tutorialManager = TutorialManager(parent: view.window!)
+        let lastBuild = UserDefaults.standard.integer(forKey: "lastBuildSelectRG")
+        UserDefaults.standard.set(KumpeHelpers.KumpeAPIClient.appBuild, forKey: "lastBuildSelectRG")
+
+        // Create Targets
+        let targetShare = createTutorialTarget(view: buttonShare.view, message: "Share Static IP information.", position: .bottom, breakPoint: true)
+        let targetModel = createTutorialTarget(view: SelectRGPicker, message: "Select RG Model", position: .bottom, breakPoint: true)
+        let targetCancel = createTutorialTarget(view: buttonCancel.view, message: "Go back to home screen.", position: .bottom, breakPoint: false)
+        let targetNext = createTutorialTarget(view: buttonNext, message: "Click Next to view Uverse Gateway Instructions", position: .bottom)
+
+        // Add Targets since build 16
+        if lastBuild < 16 {
+            tutorialManager.addTargets([targetShare,targetModel,targetCancel,targetNext])
+        }
+
+        // Show Tutorial
+        tutorialManager.fireTargets()
+    }
+}
+
 public func createTutorialTarget(view: UIView?, message: String, position: TutorialTarget.TargetPosition, shape: HoleShape = .roundedRect, breakPoint: Bool = true) -> TutorialTarget {
     let target = TutorialTarget(view: view)
         .withArrow(true)

@@ -84,4 +84,12 @@ platform :ios do
 	match(type: "appstore", readonly: is_ci, git_basic_authorization: ENV['MATCH_GIT_BASIC_AUTHORIZATION'], git_url: "https://github.com/kumpeapps/fastlane_certs.git")
   end
 
+  lane :notifytest do
+	get_build_number
+  end
+
+  lane :get_metadata do
+  	fastlane deliver download_metadata
+  end
+
 end
