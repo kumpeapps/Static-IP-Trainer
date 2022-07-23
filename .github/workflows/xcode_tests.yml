@@ -71,4 +71,4 @@ jobs:
       run: bundle exec fastlane beta
 
     - name: Commit and Push
-      run: git commit ./Static IP Trainer.xcodeproj ./Static IP Trainer/Info.plist ./fastlane/ -m "Updated Fastfile" && git push
+      run: git commit "./Static IP Trainer.xcodeproj" "./Static IP Trainer/Info.plist" -m "Updated Fastfile" && git push
