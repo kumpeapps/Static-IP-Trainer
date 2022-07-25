@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KumpeHelpers
 
 class ARRISRG1ViewController: UIViewController {
 
@@ -20,11 +21,17 @@ class ARRISRG1ViewController: UIViewController {
     var SubnetMask = ""
     var PrimaryDNS = ""
     var SecondaryDNS = ""
-    
+
+    // MARK: Buttons
+    @IBOutlet weak var buttonCancel: UIBarButtonItem!
+    @IBOutlet weak var buttonShare: UIBarButtonItem!
+
+    // MARK: Parameters
+    var message: String! = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        buttonShare.isEnabled = false
     }
     
     @IBAction func NextButtonPressed(_ sender: Any) {
@@ -48,5 +55,14 @@ class ARRISRG1ViewController: UIViewController {
         }
     }
 
+    // MARK: pressedShare
+    @IBAction func pressedShare(_ sender: Any) {
+        KumpeHelpers.Share.text(message, self, shareButton: buttonShare)
+    }
+
+    // MARK: pressedCancel
+    @IBAction func pressedCancel(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }

@@ -1,0 +1,1 @@
+Calculates Static IP information and provides calculated instructions for configuring Static IPs on Uverse RGs.

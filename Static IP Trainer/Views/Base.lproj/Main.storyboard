@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5i1-aC-Rwp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5i1-aC-Rwp">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start IP Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIm-BQ-cBA">
-                                <rect key="frame" x="125.5" y="124" width="124" height="21"/>
+                                <rect key="frame" x="126" y="124" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="132" id="WRb-eG-nIh"/>
                                     <constraint firstAttribute="height" constant="21" id="tZ1-YU-3V0"/>
@@ -142,6 +142,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dhk-lE-uxK" firstAttribute="leading" secondItem="1Il-ia-NBI" secondAttribute="trailing" constant="-10" id="07i-1F-fKE"/>
@@ -169,7 +170,6 @@
                             <constraint firstItem="rfh-Br-zUC" firstAttribute="leading" secondItem="CDA-df-JlV" secondAttribute="trailing" constant="-13" id="kCj-kw-xIS"/>
                             <constraint firstItem="BIm-BQ-cBA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ygQ-va-SMU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="UVT- Static IP Trainer" id="mqT-HM-WQA">
                         <barButtonItem key="backBarButtonItem" title="Back" id="2iC-kB-YAc"/>
@@ -180,6 +180,8 @@
                         <outlet property="IPO2" destination="CDA-df-JlV" id="Wr5-ka-BjW"/>
                         <outlet property="IPO3" destination="Fvc-Ck-xxU" id="dta-YH-sC9"/>
                         <outlet property="IPO4" destination="jD0-cY-LTI" id="GRr-tp-kSy"/>
+                        <outlet property="buttonNext" destination="mA8-pg-APo" id="86h-Y8-xuz"/>
+                        <outlet property="labelStartIP" destination="BIm-BQ-cBA" id="Muc-fF-bFI"/>
                         <segue destination="7a2-04-PaD" kind="show" identifier="SelectRG" id="f2i-4w-0vx"/>
                     </connections>
                 </viewController>
@@ -210,6 +212,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gpd-1e-RyZ"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4Ay-ka-pGH" firstAttribute="top" secondItem="q7a-LM-AlP" secondAttribute="bottom" constant="2" id="S2E-AU-Z2f"/>
@@ -217,10 +220,27 @@
                             <constraint firstItem="q7a-LM-AlP" firstAttribute="centerX" secondItem="Th9-Du-wsh" secondAttribute="centerX" id="qob-9b-6j5"/>
                             <constraint firstItem="4Ay-ka-pGH" firstAttribute="centerX" secondItem="gpd-1e-RyZ" secondAttribute="centerX" id="tDD-9x-WaB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gpd-1e-RyZ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Select RG" id="DLN-ha-sUr" userLabel="Select RG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rI0-XP-eQF"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="KlF-3k-n5b">
+                                <connections>
+                                    <action selector="pressedCancel:" destination="7a2-04-PaD" id="EAf-er-eoE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="FDV-ua-ddr">
+                                <connections>
+                                    <action selector="pressedShare:" destination="7a2-04-PaD" id="DCF-yi-ELh"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="SelectRGPicker" destination="q7a-LM-AlP" id="eDm-rT-mdG"/>
+                        <outlet property="buttonCancel" destination="KlF-3k-n5b" id="ESv-kX-6tm"/>
+                        <outlet property="buttonNext" destination="4Ay-ka-pGH" id="LlA-Ij-JPu"/>
+                        <outlet property="buttonShare" destination="FDV-ua-ddr" id="BXu-fy-I3e"/>
                         <segue destination="oLu-JV-9KH" kind="show" identifier="PaceRG1" id="YuT-n5-0xw"/>
                         <segue destination="qjz-mj-Vhv" kind="show" identifier="ARRISRG1" id="ur1-zD-3bn"/>
                     </connections>
@@ -247,13 +267,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(192.168.1.254)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBk-tu-9oL">
-                                <rect key="frame" x="108" y="107.5" width="159.5" height="27.5"/>
+                                <rect key="frame" x="109.5" y="107.5" width="156.5" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Click Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PER-9A-1M0">
-                                <rect key="frame" x="110.5" y="173" width="154" height="26.5"/>
+                                <rect key="frame" x="111" y="173" width="153" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -265,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Click Link Configuration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyZ-dH-w4m">
-                                <rect key="frame" x="62.5" y="287" width="250" height="26.5"/>
+                                <rect key="frame" x="63" y="287" width="249" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -282,6 +302,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="jjN-Ms-ByR"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ivb-jV-UBv" firstAttribute="top" secondItem="kyZ-dH-w4m" secondAttribute="bottom" constant="57" id="5Zi-tE-Ryy"/>
@@ -298,9 +319,25 @@
                             <constraint firstItem="MBk-tu-9oL" firstAttribute="centerX" secondItem="jjN-Ms-ByR" secondAttribute="centerX" id="wIz-Ly-dfh"/>
                             <constraint firstItem="MBk-tu-9oL" firstAttribute="top" secondItem="Zov-YJ-0zO" secondAttribute="bottom" constant="8" id="xsG-M0-fOY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jjN-Ms-ByR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Pace RG" id="zWH-g0-VT2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Psh-I8-Mcx"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="b5f-nW-MDL">
+                                <connections>
+                                    <action selector="pressedCancel:" destination="oLu-JV-9KH" id="AUJ-78-NLt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="z7O-cv-k8w">
+                                <connections>
+                                    <action selector="pressedShare:" destination="oLu-JV-9KH" id="n9f-ES-dP2"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonCancel" destination="b5f-nW-MDL" id="fZc-Ve-kJI"/>
+                        <outlet property="buttonShare" destination="z7O-cv-k8w" id="3sx-U3-SMb"/>
                         <segue destination="AD9-BA-Ise" kind="show" identifier="PaceRG2" id="Xp4-Fw-fp3"/>
                     </connections>
                 </viewController>
@@ -317,19 +354,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. Scroll Down to Supplementary Network" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKm-8m-jRN">
-                                <rect key="frame" x="10.5" y="80" width="354.5" height="23"/>
+                                <rect key="frame" x="11.5" y="80" width="352" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. Select Add Additional Network" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgB-Os-cxz">
-                                <rect key="frame" x="47.5" y="141" width="280" height="23"/>
+                                <rect key="frame" x="48.5" y="141" width="278" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. In The Router Address Field Enter" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRQ-vd-3QS">
-                                <rect key="frame" x="36.5" y="197" width="302" height="23"/>
+                                <rect key="frame" x="37.5" y="197" width="300" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -342,31 +379,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. In The Subnet Mask Field Enter" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFy-GX-K7T">
-                                <rect key="frame" x="45" y="284" width="285" height="23"/>
+                                <rect key="frame" x="46" y="284" width="283" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Mask" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1S-dD-vc7">
-                                <rect key="frame" x="132" y="310" width="111.5" height="23"/>
+                                <rect key="frame" x="132.5" y="310" width="110.5" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9. Check Auto Firewall Open" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te8-gh-Aii">
-                                <rect key="frame" x="67.5" y="362" width="240" height="23"/>
+                                <rect key="frame" x="68.5" y="362" width="238" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10. Click Save" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-6P-852">
-                                <rect key="frame" x="129" y="416" width="117" height="23"/>
+                                <rect key="frame" x="129.5" y="416" width="116" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dnr-1q-qEz"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4WE-6P-852" firstAttribute="top" secondItem="Te8-gh-Aii" secondAttribute="bottom" constant="31" id="DKv-Gv-pUe"/>
@@ -389,11 +427,27 @@
                             <constraint firstItem="vFy-GX-K7T" firstAttribute="top" secondItem="nep-BX-64d" secondAttribute="bottom" constant="38" id="w0s-96-Ndl"/>
                             <constraint firstItem="OgB-Os-cxz" firstAttribute="centerX" secondItem="dnr-1q-qEz" secondAttribute="centerX" id="yCi-kF-k3R"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dnr-1q-qEz"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Pace RG" id="5JU-WZ-fCr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cCS-KZ-HQc"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="mTa-Ej-36d">
+                                <connections>
+                                    <action selector="pressedCancel:" destination="AD9-BA-Ise" id="r3U-p4-SZk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="q1F-Ic-R17">
+                                <connections>
+                                    <action selector="pressedShare:" destination="AD9-BA-Ise" id="fWw-Yx-IuX"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="RGIPLabel" destination="nep-BX-64d" id="rdU-bs-flC"/>
                         <outlet property="SubnetMaskLabel" destination="y1S-dD-vc7" id="hGM-Sd-xKx"/>
+                        <outlet property="buttonCancel" destination="mTa-Ej-36d" id="1za-Cq-HRg"/>
+                        <outlet property="buttonShare" destination="q1F-Ic-R17" id="R8L-jI-pCj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chG-ne-FQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,7 +472,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(192.168.1.254)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-A6-jWv">
-                                <rect key="frame" x="108" y="104" width="159.5" height="27.5"/>
+                                <rect key="frame" x="109.5" y="104" width="156.5" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -430,7 +484,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Click Subnets &amp; DHCP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-2S-86f">
-                                <rect key="frame" x="68.5" y="233" width="238.5" height="26.5"/>
+                                <rect key="frame" x="69" y="233" width="237.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -447,6 +501,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7JB-Zb-UaE"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YTE-22-E20" firstAttribute="top" secondItem="7JB-Zb-UaE" secondAttribute="top" constant="26" id="0e1-sG-Mv2"/>
@@ -461,9 +516,25 @@
                             <constraint firstItem="YTE-22-E20" firstAttribute="width" relation="lessThanOrEqual" secondItem="ma9-y7-v1r" secondAttribute="width" id="cfn-oA-Hzl"/>
                             <constraint firstItem="0gW-A6-jWv" firstAttribute="centerX" secondItem="7JB-Zb-UaE" secondAttribute="centerX" id="ing-Ev-1nP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7JB-Zb-UaE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ARRIS RG" id="v5E-Ef-joF">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="eZr-Jp-B5y"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="QBO-ob-T9m">
+                                <connections>
+                                    <action selector="pressedCancel:" destination="qjz-mj-Vhv" id="sqd-Q8-nfc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="y7a-ns-k2f">
+                                <connections>
+                                    <action selector="pressedShare:" destination="qjz-mj-Vhv" id="91w-bR-KRH"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonCancel" destination="QBO-ob-T9m" id="UjG-y9-Gj7"/>
+                        <outlet property="buttonShare" destination="y7a-ns-k2f" id="JqX-Jh-nQ8"/>
                         <segue destination="aRw-SP-DnQ" kind="show" identifier="ARRISRG2" id="CtB-FX-3kN"/>
                     </connections>
                 </viewController>
@@ -480,7 +551,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DHCP Start" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Dj-x6-a8P">
-                                <rect key="frame" x="138.5" y="279" width="98.5" height="23"/>
+                                <rect key="frame" x="139" y="279" width="97.5" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="111.5" id="FR9-vH-iYS"/>
@@ -491,7 +562,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DHCP End" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-T7-ion">
-                                <rect key="frame" x="143" y="362" width="89.5" height="23"/>
+                                <rect key="frame" x="143" y="362" width="89" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="111.5" id="2a2-MX-JWY"/>
@@ -529,7 +600,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Set Public Subnet Enable to On" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c4O-OD-i90">
-                                <rect key="frame" x="44.5" y="60" width="286" height="23"/>
+                                <rect key="frame" x="45.5" y="60" width="284" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="2pq-SZ-JiK"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="n8s-fK-WhD"/>
@@ -539,7 +610,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. In The Public Subnet Mask Enter" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="631-0P-wpf">
-                                <rect key="frame" x="39" y="177" width="297" height="23"/>
+                                <rect key="frame" x="40.5" y="177" width="294.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="7wx-19-6pJ"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="302" id="hqH-aB-EZq"/>
@@ -549,7 +620,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Mask" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-NA-gVL">
-                                <rect key="frame" x="132" y="199" width="111.5" height="23"/>
+                                <rect key="frame" x="132.5" y="199" width="110.5" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127" id="vmh-aE-ps9"/>
@@ -600,6 +671,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ai0-Vg-vsu"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="631-0P-wpf" firstAttribute="top" secondItem="gNa-PB-bOk" secondAttribute="bottom" constant="8" id="AXd-du-Wb9"/>
@@ -633,13 +705,29 @@
                             <constraint firstItem="Dhp-Zm-Ejf" firstAttribute="top" secondItem="Bzb-a1-6Wi" secondAttribute="bottom" constant="27" id="vpL-OK-jWU"/>
                             <constraint firstItem="ji0-T7-ion" firstAttribute="top" secondItem="qfz-C0-Ff3" secondAttribute="bottom" constant="8" id="yG6-LP-abH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ai0-Vg-vsu"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ARRIS RG" id="rgs-Gs-f4b">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Tnn-qE-4EA"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="K2a-Dg-squ">
+                                <connections>
+                                    <action selector="pressedCancel:" destination="aRw-SP-DnQ" id="tkU-gF-v8B"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="jlA-Sz-eXZ">
+                                <connections>
+                                    <action selector="pressedShare:" destination="aRw-SP-DnQ" id="YP5-fD-PML"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="DHCPEndLabel" destination="ji0-T7-ion" id="brI-MX-BJ6"/>
                         <outlet property="DHCPStartLabel" destination="5Dj-x6-a8P" id="TyH-61-RBF"/>
                         <outlet property="RGIPLabel" destination="gNa-PB-bOk" id="QJO-hv-A6O"/>
                         <outlet property="SubnetMaskLabel" destination="u8W-NA-gVL" id="5Ry-CD-Tz6"/>
+                        <outlet property="buttonCancel" destination="K2a-Dg-squ" id="xZT-1V-weA"/>
+                        <outlet property="buttonShare" destination="jlA-Sz-eXZ" id="m7g-j1-LOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNw-iy-hQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
