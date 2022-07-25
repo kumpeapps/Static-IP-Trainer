@@ -73,7 +73,7 @@ platform :ios do
       overwrite_screenshots: true
   	)
   	if !is_ci
-  		notification(subtitle: "Finished Uploading", message: "Static IP Trainer release build upload complete", title: "fastlane: Static IP Trainer", content_image: "https://api.kumpeapps.com/images/kumpeapps/base_logo_white_background.png")
+  		notification(subtitle: "Finished Uploading", message: "Static IP Trainer release  build upload complete", title: "fastlane: Static IP Trainer", content_image: "https://api.kumpeapps.com/images/kumpeapps/base_logo_white_background.png")
   	end
   end
 
