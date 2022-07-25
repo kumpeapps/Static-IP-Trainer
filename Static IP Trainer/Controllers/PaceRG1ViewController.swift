@@ -31,9 +31,7 @@ class PaceRG1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        buttonShare.isEnabled = false    }
     
     @IBAction func NextButtonPressed(_ sender: Any) {
     performSegue(withIdentifier: "PaceRG2", sender: nil)

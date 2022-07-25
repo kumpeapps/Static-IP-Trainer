@@ -35,7 +35,7 @@ class PaceRG2ViewController: UIViewController {
         super.viewDidLoad()
         RGIPLabel.text = "\(IPO1).\(IPO2).\(IPO3).\(RGIPO4)"
         SubnetMaskLabel.text = "\(SubnetMask)"
-        // Do any additional setup after loading the view.
+        buttonShare.isEnabled = false
     }
 
     // MARK: pressedShare
